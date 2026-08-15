@@ -1,6 +1,6 @@
 // Immutable Function -Function that does not manipulate the original object but instead returns a new Object
 
-const person = {
+const mtu = {
     name: "Arthur",
     age: "26",
     location: "Dammam"
@@ -19,10 +19,11 @@ function updateLocation(person, newLocation) {
     }
 }
 
-const person2 = updateLocation(person, "Riyadh")
+const person2 = updateLocation(mtu, "Riyadh")
 const person3 = updateLocation(Jiji, "Jeddah")
 
 console.log(person2)
-console.log(person)
+console.log(mtu)
 console.log(person3)
+
 
