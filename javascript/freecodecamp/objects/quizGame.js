@@ -46,4 +46,21 @@ function getRandomQuestion(questions){
   return questions[randomIndex];
 }
 
-console.log(getRandomQuestion(questions))
+function getRandomComputerChoice(choices){
+  const randomIndex = Math.floor(Math.random() * choices.length)
+  return choices[randomIndex]
+}
+
+function getResults(question, computerChoice){
+  if(computerChoice === question.answer){
+    return "The computer's choice is correct!"
+  }else {
+    return `The computer's choice is wrong. The correct answer is: ${question.answer}`
+  }
+}
+
+const quiz = getRandomQuestion(questions)
+const computerChoice = getRandomComputerChoice(quiz.choices)
+console.log(quiz);
+console.log(computerChoice);
+console.log(getResults(quiz, computerChoice))
