@@ -36,7 +36,18 @@ const employees = [
 ];
 
 const activeEmployees = employees.filter(employee => employee.active)
-console.log(activeEmployees);
+//console.log(activeEmployees);
+
+
+
+function getActiveEmployeesByDepartment(employees, department){
+  const newCategory = employees.filter(employee => employee.department === department).map(employee => employee.name)
+
+    return(newCategory)
+}
+
+console.log(getActiveEmployeesByDepartment(employees, "IT"))
+console.log(getActiveEmployeesByDepartment(employees, "Finance"))
 
 // const names = users.map(user => user.name );
 // const above25 = users.filter(user => user.age >= 25)
