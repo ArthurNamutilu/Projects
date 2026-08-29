@@ -2,7 +2,7 @@
 
 const person = { name: "Alex", age: 30 };
 
-const copy = { ...person };
+const copy = { ...person, age: 28};
 
 console.log(copy);          // { name: "Alex", age: 30 }
 console.log(copy === person); // false (different reference)

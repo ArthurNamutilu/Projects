@@ -7,6 +7,8 @@ const employee = {
     }
 };
 console.log(employee["contact"]["phone"]);
+employee["contact"]["street"] = "Kileleshwa"
+
 employee.contact.city = "Nairobi";
 
 console.log(employee);
