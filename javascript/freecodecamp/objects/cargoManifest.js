@@ -20,7 +20,6 @@ function validateManifest(manifest){
   
 }
 
-
 const testManifest =  { containerId: 68, destination: "Salinas", weight: 101, unit: "lb", hazmat: true }
 //{ containerId: 68, destination: "Salinas", weight: 45.45, unit: "kg", hazmat: true } 
 
