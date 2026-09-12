@@ -43,3 +43,18 @@ function getPunctuationCount(sentence) {
 const punctuationCount = getPunctuationCount("WHAT?!?!?!?!?");
 console.log(`Punctuation Count: ${punctuationCount}`);
 
+function getWordCount(sentence){
+  let count = 0;
+  if (sentence.trim() === ""){
+    return 0
+  }
+    const words = sentence.trim().split(" ")
+    for(const word of words){
+      if(word !== ""){
+              count ++;
+      }
+    }
+    return count
+}
+
+console.log(getWordCount("God is good all the time."))
