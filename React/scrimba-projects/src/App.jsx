@@ -9,6 +9,7 @@ function App() {
       <li>Financial Freedom</li>
       <li>It is fun</li>
       <li>Global Transferable Skill</li>
+      <li>Coding is the Future</li>
     </ul>
     </>
   )
