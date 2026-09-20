@@ -1,18 +1,13 @@
 import './App.css'
+import Navbar from './components/Navbar'
+import Main from './components/Main'
 
-function App() {
+export default function App() {
 
   return (
     <>
-    <h4>Reasons I love Reat</h4>
-    <ul>
-      <li>Financial Freedom</li>
-      <li>It is fun</li>
-      <li>Global Transferable Skill</li>
-      <li>Coding is the Future</li>
-    </ul>
+    <Navbar />
+    <Main />
     </>
   )
 }
-
-export default App
