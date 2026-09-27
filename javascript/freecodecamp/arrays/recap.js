@@ -10,3 +10,20 @@ const singles = [1,2,3,4,5]
 const doubles = singles.map(single=>single * 2)
 console.log(singles);
 console.log(doubles);
+
+/*
+***********  Mutates the original array ***********************
+push()
+pop()
+shift()
+unshift()
+splice()
+sort()
+
+***********  Creates/returns something without changing the original ***********************
+slice()
+map()
+filter()
+find()
+
+*/
