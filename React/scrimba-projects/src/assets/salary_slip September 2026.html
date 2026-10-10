@@ -1,0 +1,1173 @@
+   
+
+      <script type="text/javascript" src="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/Jquery/jquery.min.js?dontcash=3581003904"></script>
+
+                <script type="text/javascript" src="https://ent.menaitech.com/ntandt/application/hrms/mename/lib/form_actions.js?dontcash=5371505856"></script>
+        <script type="text/javascript" src="https://ent.menaitech.com/ntandt/application/hrms/mename/lib/formcheck.js?dontcash=7162007808"></script>
+        <link href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/freemiucss/select2.min.css?var=924970657" rel="stylesheet" />
+        <script type="text/javascript" src="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/js/shared.js?dontcash=16114517568" ></script>
+    <script src="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/js/select2.min.js"></script>
+    <script>
+        let isReportPage = 0;
+        
+        
+    </script>
+    <style type="text/css">
+        @font-face {
+            font-family: 'passwords';
+
+            src: url('https://ent.menaitech.com/ntandt/application/hrms/DB/skins/light/font/text-security-disc_password.ttf')  format('truetype');
+        }
+    </style>
+    <script>
+    $(document).ready(function(e) {
+        if($('.myinputfields.passwords') != undefined){
+            $('.myinputfields.passwords').attr('type', 'password');
+        }
+        if($('.coustom-input-ta.myinputfields.login1') != undefined){
+            $('.coustom-input-ta.myinputfields.login1').attr('type', 'password');
+        }
+    });
+    
+    </script>
+    
+    
+
+
+
+
+<!DOCTYPE HTML>
+
+	<head>
+		
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+<meta http-equiv="Cache-Control" content="no-store" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Cache-Control" content="must-revalidate" />
+<meta http-equiv="Cache-Control" content="max-age=0" />
+<meta content=" MenaITech is the first software company in the Arab region specialized in the development and distribution of Human Resources solutions to top public and private organizations of various countries operating in the Middle East and North Africa." name="Description" />
+<meta content=" MenaITech ,Mena, Middle East and North Africa, HR, HRMS ,Payroll, Human Resources, solutions, PHP, webinterface, webbased, IT professionals" name="Keywords" />
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">	
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+		<meta http-equiv="MSThemeCompatible" content="Yes">
+		<title>Salary Slip</title>
+		<!-- Including CSS Files -->
+		<!------------------------->  
+				<link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/bootstrap/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/custom-me-style.css">	
+		<link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/clockpicker.css">	
+		        
+		<link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/foundation-datepicker.min.css">	
+		<link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/jquery.mCustomScrollbar.css">	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/print.css?dontcash=v7.8.2208.08">	
+	
+<style type="text/css">
+		 @media (max-width: 1024px) {
+body .mob-no-pad{
+	padding-right: 0!important;
+}}
+		 @media (min-width: 750px) {
+body .mob-width{
+	width: 50%!important;
+}}
+ @media (max-width: 751px) {
+body .mob-width{
+	width: 100%!important;
+}}
+
+
+</style>
+</head>
+	<body>
+		<form action="salary_slip1.php" method="post" name="form" target="_self">
+			<div class= 'container-salary-slip'>		
+				<div class="row">
+					<div class="col-sm-12 col-12 col-md-12">
+						<!-- Salary Slip Header -->
+						<div class="row">
+							<div class="col-sm-12 col-12">
+								<!DOCTYPE HTML>
+<html   dir="ltr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+             <title>MenaME - Employee Self Services</title>
+       
+    <!-- Including CSS Files -->
+    <!------------------------->  
+
+    <!-- Datetime Picker -->
+    <script src="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/Jquery/clockpicker.js"></script>     
+    <!-- moment.js -->
+    <script src="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/Jquery/moment.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/bootstrap/bootstrap.min.css?dontcash=v7.8.2208.08">
+    <link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/custom-me-style.css?dontcash=v7.8.2208.08">	
+    <link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/clockpicker.css">
+
+   
+    
+            <link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/foundation-datepicker.min.css">
+    
+    <!-- foundation DatePicker -->
+    <script src="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/Jquery/foundation-datepicker.min.js?dontcash=v7.8.2208.08"></script>
+    
+
+    <link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/jquery.mCustomScrollbar.css">	    
+    <link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/bootstrap-duallistbox.css">	    
+    
+    <link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/main-style.css?dontcash=v7.8.2208.08">    
+    <link rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/fontawesome/css/font-awesome.min.css">    <link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/custom-style-profile.css">     
+    <link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/toastr.min.css">	    	
+    <link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/tippy.css">	    	
+    <link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/swiper.css">
+
+
+    <script src="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/Jquery/toastr.min.js"></script>
+    	
+    <style type="text/css">
+			/*
+		.required {
+			color : #FF0000!important;
+		}
+		*/
+		.required::after {
+		    content: " *";
+		    /* color : #FF0000 !important; */
+		}
+	
+
+
+   .card-title [class^='icon-'], .card-title [class*='icon-'], i.fa, .btn-circle-dropdown,
+                        [class^='icon-'], [class*='icon-'], [class^='new-icon icon-'], [class*='new-icon icon-'],
+                        [class^='icon-']:before, [class*=' icon-']:before, [class^='new-icon icon-']:before, [class*=' new-icon icon-']:before,
+                        .icon-header:before, .icon-header span:before, .side-nav-icons a.side-nav-img, .side-nav-icons a.side-nav-img i, .side-nav-icons a.side-nav-img span,
+                        .btn-circle p,.btn-outline-primary, .tippy .path1:before, .tippy::before, .text-info, .modal-header .close,
+                        .container-fullwidth .default-body .close span, .btn-circle-print:hover
+                        {
+                            color : #007ee1 !important;
+                        }
+                        .btn-circle-dropdown,.page-item.active .page-link,
+                        .btn-outline-primary:not(disabled):hover, .VacancyBox
+                        {
+                            background: #007ee1 !important;
+                            color: #FFF !important;
+                        }
+                        .btn-outline-primary, .my-salary-slip .last-month, .my-salary-slip .current-month, .default-body .announcements .paragraphs hr,
+                        :checked.custom-control-input ~ .custom-control-label::before, .default-body .paragraphs hr
+                        {
+                        	border-color:#007ee1 !important;
+                        }
+                        .my-salary-slip .current-month
+                        {
+                            background: #007ee1 !important;
+                        }
+                        .blue_border_bottom, .modal-header, .report_header_style
+                        {
+                            border-bottom: 2px solid #007ee1 !important ;
+                        }
+                        hr.thick-blue
+                        {
+                            border-top: 2px solid #007ee1;
+                        }
+                        .mCS-blue.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, :checked.custom-control-input ~ .custom-control-label::before, .blue-line, .VacancyBox
+                        {
+                            background-color: #007ee1 !important;
+                        }
+
+                        .mCS-blue.mCSB_scrollTools .mCSB_draggerRail
+                        {
+                            background-color: #007ee1 !important;
+                            opacity: 0.1 !important
+                        }
+                        
+
+                        
+</style>    <style type="text/css">
+        .datepicker.dropdown-menu {
+            max-width: 203px !important;
+        }
+    </style>
+</head> <div  dir="ltr" style=" width:100%;"><p style="text-align: center;"><span style="font-size: medium;"><img src="data:image/png;base64,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" alt="" width="486" height="130" /></span></p>
+<p style="text-align: center;"><span style="font-size: medium;">&nbsp;</span></p>
+<p style="text-align: center;"><strong><span style="font-size: medium;">Nesma Infrastructure and Technology&nbsp;</span></strong></p>
+<p style="text-align: center;"><strong><span style="font-size: medium;">Salary Slip</span></strong></p></div> 							</div>
+						</div>					
+						<hr>
+						<!-- Salary Slip Body -->
+
+						<!-- General Information -->					
+						<div class="row pt-2">
+
+							<div class="col-sm-12 col-12 col-md-12">
+								<div class="row p-2" >
+									<!-- Left Side  -->
+									<div class="col-md-6" >							
+										<!-- Employee Name -->
+										<div class="row">
+											<div class="col-4 col-md-3   ">
+												<p style="
+    white-space: nowrap;
+">Employee Code</p>
+											</div>
+											<div class="col-sm-1 col-1 col-md-1">
+												<p>:<p>
+											</div>
+											<div class="col-6 col-md-4">
+												<p class='font-weight-bold'>3793</p>
+											</div>
+										</div>	
+
+										<div class="row">
+											<div class="col-4 col-md-3">
+												<p style="
+    white-space: nowrap;
+">Employee Name</p>
+											</div>
+											<div class="col-sm-1 col-1 col-md-1">
+												<p>:<p>
+											</div>
+											<div class="col-6 col-md-4">
+												<p class='font-weight-bold'>ARTHUR FRED  NAMUTILU</p>
+											</div>
+										</div>	
+										<!-- Location -->		
+												
+										<div class="row">
+											<div class="col-sm-3">
+												<p>Location</p>
+											</div>
+											<div class="col-sm-1">
+												<p>:<p>
+											</div>
+											<div class="col-sm-8">
+												<p class='font-weight-bold'>Ras Tanura 0810606 / Operations / Operations Management</p>
+											</div>
+										</div>	
+																				<!-- Classification -->						
+										<div class="row">
+											<div class="col-sm-3">
+												<p>Classification </p>
+											</div>
+											<div class="col-sm-1">
+												<p>:<p>
+											</div>
+											<div class="col-sm-8">
+												<p class='font-weight-bold' >D2  / Project/Site  / 1</p>
+											</div>
+										</div>	
+										<div class="row">
+											<div class="col-sm-3">
+												<p>Work Schedule</p>
+											</div>
+											<div class="col-sm-1">
+												<p>:<p>
+											</div>
+											<div class="col-sm-8">
+												<p class='font-weight-bold' ></p>
+											</div>
+										</div>	
+										<!-- Position -->						
+										<div class="row">
+											<div class="col-sm-3">
+												<p>Position</p>
+											</div>
+											<div class="col-sm-1">
+												<p>:<p>
+											</div>
+											<div class="col-sm-8">
+												<p class='font-weight-bold'>Labor</p>
+											</div>
+										</div>		
+								<!--cut of date  -->
+																	</div>
+									<!-- Right Side  -->
+									<div class="col-md-6" >
+<!-- 									<div class="col-sm-4 col-4 col-md-4">	
+ -->										<!-- Hirinig Date -->
+										<div class="row">
+											<div class="col-4  col-md-2 col-lg-3 ">
+												<p>Hiring Date</p>
+											</div>
+											<div class="col-1 col-md-1 col-lg-1 ">
+												<p>:<p>
+											</div>
+											<div class="col-7 col-md-9 col-lg-7">
+												<p class='font-weight-bold' >01/02/2026</p>
+											</div>
+										</div>
+										<!-- Month -->
+										<div class="row">
+											<div class="col-4 col-md-2 col-lg-3 ">
+												<p>Month</p>
+											</div>
+											<div class="col-1 col-md-1 col-lg-1">
+												<p>:<p>
+											</div>
+											<div class="col-6 ">
+												<p class='font-weight-bold' >Sep / 2026</p>
+											</div>
+										</div>
+										<!-- Basic Salary -->
+										<div class="row">
+											<div class="col-4 col-md-2 col-lg-3 ">
+												<p>Basic Salary</p>
+											</div>
+											<div class="col-1 col-md-1 col-lg-1">
+												<p>:<p>
+											</div>
+											<div class="col-6 ">
+												<p class='font-weight-bold' >1,100</p>
+											</div>
+										</div>
+																				<!-- Days Paid -->
+										<div class="row">
+											<div class="col-4 col-md-2 col-lg-3 ">
+												<p style="white-space: nowrap;">Days Paid</p>
+											</div>
+											<div class="col-1 col-md-1 col-lg-1">
+												<p>:<p>
+											</div>
+											<div class="col-6 ">
+												<p class='font-weight-bold' >29.94</p>
+											</div>
+                   											
+											<!-- Tax currncey -->
+ 																					</div>
+																		</div>
+								</div>					
+							</div>
+						</div>				
+						<div class="row pt-5 ">
+							<div class="col-sm-12 ">
+																<!-- Income Deductions Row  -->
+								<div class="row ">
+									<!-- Income  -->
+									<div class="col-md-6 ">												
+										<div class="row pr-5 ">
+											<div class="col-sm-12 text-center blue_border_bottom">
+												<h6>Income<h6>									
+											</div>
+										</div>
+
+ 										<div class="row pr-5 mob-no-pad">
+ 
+											<div class="col-sm-12 nopadding">
+											<table class="table table-hover  table n-bordered-dark" >                            
+													<thead >                            
+														<tr>
+															<th scope="col" style="width: 45%"></th>
+															<th scope="col"	style="width: 25%" 	class='text-right'><p class='font-weight-bold' style="white-space: nowrap;">Amount ( Ñ.Ó ) </p></th>
+																														<th scope="col" style="width: 25%" 	class=''><p class='text-right font-weight-bold'>YTD</p></th>
+															
+																														<th scope="col" style="width: 5%" 	class='text-right'></th>
+														</tr>
+													</thead>
+													<tbody>     
+														 
+														<tr> 
+															<td  style="width: 45%" class='text-left' ><p>Worth Salary</p></td>
+															<td  style="width: 25%" class='text-right' ><p>1,100</p></td>
+																														<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<th scope="col" style="width: 5%" 	class='text-right'></th>
+														</tr>
+															 
+														<tr> 
+															<td  style="width: 45%" class='text-left' ><p>Housing Allowance</p></td>
+															<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<th scope="col" style="width: 5%" 	class='text-right'></th>
+														</tr>
+															 
+														<tr> 
+															<td  style="width: 45%" class='text-left' ><p>Transportation Allowance</p></td>
+															<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<th scope="col" style="width: 5%" 	class='text-right'></th>
+														</tr>
+															 
+														<tr> 
+															<td  style="width: 45%" class='text-left' ><p>Food Allowance</p></td>
+															<td  style="width: 25%" class='text-right' ><p>300</p></td>
+																														<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<th scope="col" style="width: 5%" 	class='text-right'></th>
+														</tr>
+															 
+														<tr> 
+															<td  style="width: 45%" class='text-left' ><p>Other Allowances</p></td>
+															<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<th scope="col" style="width: 5%" 	class='text-right'></th>
+														</tr>
+															 
+														<tr> 
+															<td  style="width: 45%" class='text-left' ><p>Overtime</p></td>
+															<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<th scope="col" style="width: 5%" 	class='text-right'></th>
+														</tr>
+															 
+														<tr> 
+															<td  style="width: 45%" class='text-left' ><p>Paid Vacations</p></td>
+															<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<th scope="col" style="width: 5%" 	class='text-right'></th>
+														</tr>
+															 
+														<tr> 
+															<td  style="width: 45%" class='text-left' ><p>Other Addition</p></td>
+															<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<th scope="col" style="width: 5%" 	class='text-right'></th>
+														</tr>
+																
+														<!-- Totals -->
+														 														<tr> 
+															<td  style="width: 45%" class='text-left'><p class='font-weight-bold'>Total Income</p></td>
+															<td  style="width: 25%" class='text-right blue_border_bottom'><p class='font-weight-bold'>1,398</p></td>
+																														<td  style="width: 25%" class='text-right'><p class='font-weight-bold'>0</p></td>
+																														<td  style="width: 5%"></td>	
+														</tr>
+													</tbody>
+												</table>								
+											</div>
+										</div>
+									</div>			
+									<!-- Deductions  -->		
+									<div class=" col-md-6">				
+<!-- 																			<div class="row pl-5 ">
+ -->			
+										<div class="row ">
+											<div class="col-sm-12 text-center blue_border_bottom">
+												<h6>Deductions<h6>
+											</div>
+										</div>
+																				<!-- <div class="row pl-5 "> -->
+
+										<div class="row ">
+											<div class="col-sm-12 nopadding">
+												<table class="table table-hover  table n-bordered-dark" >                            
+													<thead >                            
+														<tr>
+															<th scope="col" style="width: 45%"></th>
+															<th scope="col"	style="width: 25%" 	class='text-right'><p class='font-weight-bold' style="white-space: nowrap;">Amount ( Ñ.Ó ) </p></th>
+																														<th scope="col" style="width: 25%" 	class='text-right'><p class='font-weight-bold text-right'>YTD</p></th>
+																														<th scope="col" style="width: 5%" 	class='text-right'></th>
+														</tr>
+													</thead>
+													<tbody>     
+														 
+														<tr> 
+															<td  style="width: 45%" class='text-left' ><p>GOSI</p></td>
+															<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<th scope="col" style="width: 5%" 	class='text-right'></th>
+														</tr>
+															 
+														<tr> 
+															<td  style="width: 45%" class='text-left' ><p>Health Insurance</p></td>
+															<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<th scope="col" style="width: 5%" 	class='text-right'></th>
+														</tr>
+															 
+														<tr> 
+															<td  style="width: 45%" class='text-left' ><p>Monthly Loans</p></td>
+															<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<th scope="col" style="width: 5%" 	class='text-right'></th>
+														</tr>
+															 
+														<tr> 
+															<td  style="width: 45%" class='text-left' ><p>Other Deductions</p></td>
+															<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<td  style="width: 25%" class='text-right' ><p>0</p></td>
+																														<th scope="col" style="width: 5%" 	class='text-right'></th>
+														</tr>
+																													<tr> 
+															<td  style="width: 45%" class='text-left' ><p>&nbsp;</p></td>
+															<td  style="width: 25%" class='text-right' ><p>&nbsp;</p></td>
+																														<td  style="width: 25%" class='text-right' ><p>&nbsp;</p></td>
+																														<td  style="width: 5%"></td>	
+														</tr> 
+																													<tr> 
+															<td  style="width: 45%" class='text-left' ><p>&nbsp;</p></td>
+															<td  style="width: 25%" class='text-right' ><p>&nbsp;</p></td>
+																														<td  style="width: 25%" class='text-right' ><p>&nbsp;</p></td>
+																														<td  style="width: 5%"></td>	
+														</tr> 
+																													<tr> 
+															<td  style="width: 45%" class='text-left' ><p>&nbsp;</p></td>
+															<td  style="width: 25%" class='text-right' ><p>&nbsp;</p></td>
+																														<td  style="width: 25%" class='text-right' ><p>&nbsp;</p></td>
+																														<td  style="width: 5%"></td>	
+														</tr> 
+																													<tr> 
+															<td  style="width: 45%" class='text-left' ><p>&nbsp;</p></td>
+															<td  style="width: 25%" class='text-right' ><p>&nbsp;</p></td>
+																														<td  style="width: 25%" class='text-right' ><p>&nbsp;</p></td>
+																														<td  style="width: 5%"></td>	
+														</tr> 
+																
+														<!-- Totals -->
+														<tr> 
+															<td  style="width: 45%" class='text-left'><p class='font-weight-bold'>Total Deductions</p></td>
+															<td  style="width: 25%" class='text-right blue_border_bottom'><p class='font-weight-bold'>0</p></td>
+																														<td  style="width: 25%" class='text-right'><p class='font-weight-bold'>0</p></td>
+																														<td  style="width: 5%"></td>	
+														</tr>
+													</tbody>
+												</table>								
+											</div>
+										</div>
+									</div>
+								</div>
+																	<!-- Net Salary Row -->
+								<div class="row  m-4 net-salary-box">
+									<div class="col-sm-12">
+										<div class="row">
+											<div class="col-sm-6">										
+												<div class="row pr-5 mt-3">
+													<div class="col-sm-12 text-right nopadding">												
+														<h6>Net Salary In Bank <span class='small' style ='font-weight : 500'>(Month Sep)</span><h6>
+													</div>
+												</div>										
+											</div>
+											<div class="col-sm-6">										
+												<div class="row pl-5 mt-3">
+													<div class="col-sm-12 nopadding ">
+														<h6 class='blue-text'>1,398 Ñ.Ó&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style='color : #555758;font-size : 0.75rem'>Saudi National Bank / Main Branch<span><h6>
+													</div>
+												</div>										
+											</div>
+										</div>
+																														<div class="row">
+											<div class="col-sm-6">										
+												<div class="row pr-5 mt-2 mb-3">
+													<div class="col-sm-12 text-right nopadding">												
+														<h6>Net Salary (YTD)<h6>
+													</div>
+												</div>										
+											</div>
+											<div class="col-sm-6">										
+												<div class="row pl-5 mt-2 ">
+													<div class="col-sm-12 nopadding">												
+														<h6>0 Ñ.Ó<h6>
+													</div>
+												</div>										
+											</div>
+										</div>
+																			</div>
+								</div>
+																<div class="row">
+									<div class="col-md-6">
+										
+									</div>
+								</div>
+								<div class="row ">
+									<!-- Provident Funds  -->
+									
+
+			
+											
+<!-- Vacation balance part -->
+			<!-- end vacation balance part -->
+														
+														<!-- Totals -->
+														<!-- <tr> 
+															<td  style="width: 85%" class='text-left'><p class='font-weight-bold'>Total</p></td>
+															<td  style="width: 10%" class='text-right blue_border_bottom'><p class='font-weight-bold'>0</p></td>													
+															<td  style="width: 5%"></td>	
+														</tr> -->
+													</tbody>
+												</table>								
+											</div>
+										</div>
+									</div>
+									<!-- Overtime  -->
+																		<!-- Housing Accurals  -->
+																		
+									<!-- Vacations  -->
+																														
+											
+<!-- Vacations  -->
+																					
+																							<div class="col-sm-6 pt-5 pl-5">												
+													<div class="row ">
+														<div class="col-sm-12 text-center gray_border_bottom">
+															<h6>Permission Details</h6>									
+														</div>
+													</div>
+													<div class="row ">
+														<div class="col-sm-12 nopadding">
+															<table class="table table-hover  table n-bordered-dark gray_head" >
+																<thead>
+																	<tr>
+																		<th scope="col" style="width: 85%"><p class='text-left font-weight-bold shadow_color'>Type</p></th>
+																		<th scope="col" style="width: 2%"	class='text-right'></th>
+																		<th scope="col"	style="width: 10%" 	class='text-right'><p class='font-weight-bold shadow_color text-center'>Period</p></th>
+																	</tr>                       
+																</thead>                            
+																<tbody>   												
+																																			<tr> 
+																			<td  style="width: 85%" class='text-left' ><p>Early Out</p></td>	
+																			<td  style="width: 2%"	class='text-right'>&nbsp;</td>	
+																			<td  style="width: 10%" class='text-right' ><p>0.52</p></td>
+																		</tr>
+																																			<!-- Totals -->
+																	
+																</tbody>
+															</table>								
+														</div>
+													</div>
+												</div>
+																					<!-- Allowances  -->
+									
+									<!-- Egyptian sick vacation  -->
+									
+									<!-- Loans  -->
+									
+									<!-- Other Income  -->
+									
+									<!-- Other Deductions  -->
+									
+									<!-- Retroactive  -->
+																	</div>
+								<!-- Extra Bank  -->
+								<div class="row">							
+																	</div>						
+									<!-- show absences details -->
+									
+		<div class='col-sm-6 pt-5 pl-5'>
+			<div class='row'>
+				<div class='col-sm-12 text-center gray_border_bottom'>
+					<h6>Absence Details</h6>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-sm-12 nopadding'>
+					<table class='table table-hover table-bordered-dark gray_head'>
+						<thead>
+							<tr>
+								<th scope='col' style='width: 85%'>
+									<p class='text-left font-weight-bold shadow_color'>Type</p>
+								</th>
+								<th scope='col' style='width: 2%' class='text-right'></th>
+							
+								<th scope='col' style='width: 10%' class='text-right'>
+									<p class='font-weight-bold shadow_color text-center'>Period</p>
+								</th>
+									<th scope='col' style='width: 10%' class='text-right'>
+									<p class='font-weight-bold shadow_color text-center'>Amount</p>
+								</th>
+							</tr>
+						</thead>
+						<tbody><tr>
+			<td colspan='2' id='Vacation_Details_type'>Permission-Early Out</td>
+			<td align='right' id='Vacation_Details_Period'>0.52</td>
+			<td align='right' id='Vacation_Details_Period'>2</td>
+			</tr><tr>
+		<td colspan='2' bgcolor='' id='Vacation_Details_type'>Total</td>
+		<td align='right' bgcolor='' id='Vacation_Details_Period'>0.52</td>
+		<td align='right' id='Vacation_Details_Period'>2</td>
+		</tr></table>						
+								<div class="row pt-4">
+									<div class="col-sm-12 ">
+										<p></p>
+									</div>
+								</div>						
+													
+									
+	<div class="row p-4">		
+			<div class="col-md-4">
+			<div class="row pt-4">
+				<div class="col-md-12 text-center">
+					<h6>Prepared By</h6>
+				</div>	
+			</div>
+			<div class="row pt-4">
+				<div class="col-md-12 text-center">
+					<h6></h6>
+				</div>	
+			</div>
+			<div class="row pt-4">
+				<div class="col-md-12 text-center">
+					........................				</div>	
+			</div>
+		</div>
+		
+			<div class="col-md-4">
+			<div class="row pt-4">
+				<div class="col-md-12 text-center">
+					<h6>Approved By</h6>
+				</div>	
+			</div>
+			<div class="row pt-4">
+				<div class="col-md-12 text-center">
+					<h6></h6>
+				</div>	
+			</div>
+			<div class="row pt-4">
+				<div class="col-md-12 text-center">
+					........................				</div>	
+			</div>
+		</div>
+		
+			
+	</div>
+		
+			
+			
+			
+			
+			
+		  	    
+							</div>
+						</div>							
+					</div>
+				</div>		
+			</div>
+			<input name="currency" type="hidden"  value="1">
+			<input type="hidden" id='reportPageName' name="reportPageName" value=''>
+		</form>	
+		
+				<!-- <button id= "print_slip"> XXX</button>
+ -->
+	<!-- Print This -->
+	<script src="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/Jquery/printThis.js"></script>	
+
+<script>
+	$(document).ready(function (){
+		$("#print_slip").on('click' , function (){
+			$(".container-salary-slip").printThis(
+				{
+					header: null,
+					footer: null,
+					copyTagClasses: true
+				}
+			);
+		})
+	})
+		
+</script>
+  
+<script language="JavaScript" type="text/JavaScript">
+			window.parent.document.title="Salary Slip";
+			<!--
+			function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+			if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+				document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+			else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+			}
+			MM_reloadPage(true);
+			//-->
+						$(document).ready(function(){
+				$('.container-salary-slip').show()
+				top.$('.modal iframe').animate( { height:$('body').height()+200 }, { queue:false, duration:500 });  
+				parent.$('#RSIFrame').animate( { height:$('body').height()+200 }, { queue:false, duration:500 });
+			})
+					</script>
+  </body>
+</html>
+
+
+
+
+
+<script type="text/javascript">
+var my_dictinary = unserialize('a:281:{i:77;s:6:\"Delete\";i:421;s:6:\"Choose\";i:484;s:3:\"All\";i:489;s:4:\"Both\";i:547;s:8:\"Inactive\";i:562;s:16:\"No Records Found\";i:564;s:5:\"Print\";i:587;s:53:\"The Salary Calculation Has Already Been Posted Before\";i:595;s:39:\"The Salary Calculation Was Moved Before\";i:629;s:32:\"Please Choose An Employee First.\";i:1003;s:53:\"Are You Sure You Want To Delete The Selected Records?\";i:1004;s:37:\"You Didn`t Choose A Record To Delete!\";i:1006;s:50:\"Are you sure you want to move the selected records\";i:1007;s:41:\"You Didn`t Choose Any Record For Posting!\";i:1008;s:48:\"Are you sure of the Post Transactions operation?\";i:1010;s:30:\"A Number Must Be Entered Here!\";i:1011;s:45:\"No loans are selected to distribute the loan!\";i:1012;s:26:\"This Field Must Be Filled!\";i:1019;s:21:\"The e-mail is invalid\";i:1020;s:19:\"The date is invalid\";i:1023;s:2:\"OK\";i:1172;s:5:\"Dear \";i:1173;s:3:\"Mr.\";i:1313;s:76:\"The Two Passwords You Entered Didn`t Match! Please Re-Confirm Your Password.\";i:1324;s:19:\"Nothing Is Selected\";i:1334;s:45:\"Wrong Old Password! Password Was Not Changed.\";i:1367;s:8:\"Internal\";i:1449;s:2:\"AM\";i:1500;s:2:\"PM\";i:1888;s:19:\"Change Transactions\";i:1917;s:55:\"You Didn`t Choose A Position. Please, Select One First.\";i:2058;s:19:\"Terminated Employee\";i:2280;s:44:\"No Employees Returned For Salary Calculation\";i:2366;s:13:\"Are you sure?\";i:2518;s:6:\"Cancel\";i:2539;s:30:\"Please Enter A Positive Number\";i:2706;s:33:\"Zero Amounts Are Not Allowed Here\";i:2793;s:22:\"` Is Not Allowed Here!\";i:2794;s:23:\"\\\" Is Not Allowed Here!\";i:2876;s:15:\"Active Employee\";i:2903;s:14:\"Merit Increase\";i:2907;s:75:\"The End Date Can Not Be Before The Start Date! Please Re-enter The End Date\";i:3029;s:35:\"This Scholarship Has Been Approved!\";i:3192;s:20:\"Disciplinary Actions\";i:3229;s:18:\"Calculation Failed\";i:3230;s:22:\"Net Salary Is Negative\";i:3231;s:53:\"The Hiring Date For The Employee Is After This Month!\";i:3232;s:63:\"A Termination Transaction Has Been Performed For This Employee!\";i:3312;s:113:\"Some Raises Were Not Posted! The Employee Salary Has Conflicted With The Salary Range Limits In His Salary Scale!\";i:3340;s:57:\"Employee Has An Off-Cycle Vacations Payment In This Month\";i:3535;s:8:\"External\";i:3588;s:14:\"Service Period\";i:3596;s:6:\"Closed\";i:3597;s:10:\"In Process\";i:3762;s:70:\"The Employee Has An Offcycle Vacation With No Resumption Date Entered!\";i:3763;s:12:\"Cut Off Date\";i:3805;s:68:\"Employee Has An Off-Cycle Vacation In This Month With No Resumption!\";i:3845;s:71:\"The Hiring Date For The Employee Is After The Cut-Of-Date Of That Month\";i:3855;s:13:\"With Salaries\";i:3903;s:39:\"A Positive Number Must Be Entered Here!\";i:3904;s:39:\"5 Numbers Is The Maximum To Enter Here!\";i:3905;s:68:\"The Question Grade Can Not Be Greater Than The Question Upper Grade!\";i:4155;s:11:\"Career Path\";i:4235;s:68:\"The Appraisal Form Can Not Be Filled By The Same Evaluated Employee!\";i:4315;s:5:\"Times\";i:4365;s:94:\"The Net Salary Is Not Adequate For Some Bank/Check Transfers From Employee`s Other Banks Setup\";i:4541;s:31:\"The Employee Work Type is Daily\";i:4752;s:22:\"Financial Transactions\";i:4914;s:37:\"Please Wait To Complete The Operation\";i:5868;s:47:\"You Can Not Upload Any File With The Extension:\";i:6134;s:7:\"Confirm\";i:6836;s:5:\"Shift\";i:6894;s:51:\"Allowance Start Date Can Not Be Before Hiring Date!\";i:6895;s:47:\"Transaction Date Can Not Be Before Hiring Date!\";i:6897;s:10:\"In Advance\";i:7183;s:47:\"The Start-Time Cannot Be Equal To The End-Time!\";i:7184;s:44:\"The Start-Time Cannot Be After The End-Time!\";i:7248;s:4:\"Ext.\";i:7451;s:66:\"Salary Calculation For This Employee Was Stopped Before This Month\";i:7666;s:31:\"Please Enter An Integer Number!\";i:7717;s:40:\"You Can Not Delete A Posted Transaction!\";i:7718;s:52:\"Are You Sure You Want To Delete The Selected Record?\";i:7719;s:68:\"Some Transactions Are Posted And Will Not Be Deleted With The Batch!\";i:7720;s:51:\"Are You Sure you Want To Delete The Selected Items?\";i:7721;s:90:\"Are You Sure you Want To Delete The Selected Template And All Of Its Items (If Available)?\";i:7722;s:19:\"Please Choose Bank.\";i:7723;s:21:\"Please Choose Branch.\";i:7724;s:76:\"The End Date Can Not Be Before The Start Date! Please Re-enter The End Date.\";i:7725;s:122:\"You Cannot Save This Interview, Because The Chosen Interview Template Doesn`t Match The Questions List In The Detail Part!\";i:7726;s:62:\"You Have Updated Your Answers. Please Save Your Answers First!\";i:7727;s:47:\"Please Save Your Reference Check Results First!\";i:7728;s:45:\"This Voucher Is Already Posted, Are You Sure?\";i:7729;s:49:\"Loan Value And The Sum Of Payments Are Not Equal!\";i:7730;s:49:\"Net Salary And Distributed Amounts Are Not Equal!\";i:7731;s:54:\"Do You Want To Move To The Termination Checklist Page?\";i:7732;s:43:\"You Didn`t Choose Any Record For UnPosting!\";i:7733;s:78:\"The `Abroad Trip Details` Screen Can Only Be Viewed For International Courses.\";i:7734;s:86:\"The Resumption Date Can Not Be Before Start Date! Please Re-Enter The Resumption Date!\";i:7735;s:90:\"The Notification Date Can Not Be Before Start Date! Please Re-Enter The Notification Date!\";i:7736;s:39:\"Please Add Some Job Applications First!\";i:7737;s:34:\"This Number Must Be Larger Than 0!\";i:7738;s:59:\"The Maximum Number for the Allowed Characters Or Numbers Is\";i:7739;s:34:\"The Value Should Not Be More Than \";i:7740;s:34:\"The Value Should Not Be Less Than \";i:7741;s:64:\"The Employee Manager Can Not Be Determined As The Same Employee!\";i:7742;s:12:\"No Extension\";i:7743;s:42:\"This Date Should Not Be After Today`s Date\";i:7744;s:51:\"The Marriage Date Can Not Be Before The Birth Date!\";i:7745;s:55:\"The Insurance Date Can Not Be Before The Marriage Date!\";i:7746;s:61:\"The Allowance Start Date Can Not Be Before The Marriage Date!\";i:7747;s:57:\"The Child Birth Date Can Not Be Before The Marriage Date!\";i:7748;s:52:\"The Insurance Date Can Not Be Before The Birth Date!\";i:7749;s:58:\"The Allowance Start Date Can Not Be Before The Birth Date!\";i:7750;s:60:\"The Employee Marriage Date Can Not Be Before The Birth Date!\";i:7751;s:58:\"The Employee Hiring Date Can Not Be Before The Birth Date!\";i:7752;s:57:\"The Document Issue Date Can Not Be Before The Birth Date!\";i:7753;s:67:\"The Document Expiry Date Can Not Be Before The Document Issue Date!\";i:7754;s:63:\"The Document You Entered Has Expired, But Saving Will Complete!\";i:7755;s:68:\"The Previous Experience Start Date Can Not Be After The Hiring Date!\";i:7756;s:66:\"The Previous Experience End Date Can Not Be After The Hiring Date!\";i:7757;s:46:\"The End Date Can Not Be Before The Start Date!\";i:7758;s:50:\"The Drop Date Can Not Be Before The Delivery Date!\";i:7759;s:45:\"The Event Date Cannot Be Before Today`s Date!\";i:7760;s:60:\"You Can Not Hire This Employee! Employee`s Age Is Less Than \";i:7761;s:49:\"Years As You Setup In The System Parameters Page!\";i:7762;s:114:\"You Can Not Define This Employee As Married Or Add A Spouse Record For This Employee! Employee`s Age Is Less Than \";i:7763;s:61:\"You Can Not Add That Spouse Record! Spouse`s Age Is Less Than\";i:7764;s:50:\"This Field Must Be A Percentage And Less Than 100%\";i:7765;s:29:\"Please Select Marital Status!\";i:7766;s:21:\"Please Select Gender!\";i:7767;s:19:\"Please Select Site!\";i:7768;s:25:\"Please Select Department!\";i:7769;s:22:\"Please Select Section!\";i:7770;s:23:\"Please Select Position!\";i:7771;s:62:\"The Marriage Date Can Not Be Before The Employee`s Birth Date!\";i:7772;s:46:\"The `To Month` Can Not Be Before `From Month`!\";i:7773;s:85:\"The Furniture Compensation Date Can`t Be Before The Furniture Compensation Worth Date\";i:7774;s:82:\"The Furniture Compensation worth Date Can Not Be Before The Employee Hiring Date !\";i:7775;s:110:\"The Employee Salary Has Conflicted With The Salary Range Limits In His Salary Scale! The Record Was Not Saved!\";i:7776;s:66:\"Insurance Start Date Can Not Be After The Insurance Card End Date!\";i:7777;s:52:\"The Expire Date Can Not Be Before The Delivery Date!\";i:7778;s:70:\"The Employee Salary Has Exceeded The Budget! The Record Was Not Saved!\";i:7779;s:44:\"The Employee Salary Has Exceeded The Budget!\";i:7780;s:49:\"Notification Date Can Not Be After Current Date !\";i:7781;s:52:\"Notification Date Can Not Be Before Resumption Date!\";i:7782;s:45:\"This Date Can Not Be Before Transaction Date!\";i:7783;s:49:\"The Raise Date Cannot Be Before The Hiring Date !\";i:7784;s:68:\"The Allowance Raise Date Can Not Be Before The Allowance Start Date!\";i:7785;s:53:\"The Stop Date Can Not Be Before The Activation Date !\";i:7786;s:59:\"The Sum Of Employee And Company Contribution Should Be 100!\";i:7787;s:78:\"The Sum Of Employee, Company And Discount Should Be Equal To The Claim Amount!\";i:7788;s:87:\"Some Appraisals Were Sent To Managers Or Closed And Will Not Be Deleted With The Batch!\";i:7789;s:35:\"You can not delete unsaved records!\";i:7790;s:59:\"Are you Sure you want to delete selected Interview Request?\";i:7791;s:68:\"The Appraisal Form Can Not Be Edited By The Same Evaluated Employee!\";i:7792;s:39:\"The Weight Can Not Be Greater Than 100!\";i:7793;s:44:\"Factors Weight Total Should Be Equal To 100!\";i:7794;s:49:\"Weight Total Per Category Should Be Equal To 100!\";i:7795;s:54:\"Weight Total Per Category Should Be Equal To 100 Or 0!\";i:7796;s:101:\"Is Part Of An Un-Sent Evaluation, Do You Want To Update His Information In The Evaluation Definition?\";i:7797;s:37:\"Please Choose At Least One Item Type!\";i:7798;s:49:\"Are you sure of the Unpost Transaction operation?\";i:7799;s:76:\"You Should First Choose An Entry From The List To See Further Details Of It.\";i:7859;s:30:\"Can Not Complete This Process!\";i:7886;s:7:\"Answers\";i:8221;s:56:\"Some Transactions Are Posted, Batch Will Not Be Deleted \";i:8253;s:49:\"You Can Not Choose The Same Allowance Type Twice!\";i:8346;s:40:\"An Error Has Occurred! Please Try Again!\";i:8490;s:35:\"Entered Length Can Not Be Less Than\";i:8491;s:35:\"Entered Length Can Not Be More Than\";i:8492;s:48:\"Entered Length Should Match The Exact Length Of \";i:8493;s:36:\"Entered Value Should Be Greater Than\";i:8494;s:33:\"Entered Value Should Be Less Than\";i:8495;s:46:\"This Field Should Only Contain Numeric Values.\";i:8496;s:44:\"This Field Should Only Contain Alpha Values.\";i:8497;s:51:\"This Field Should Only Contain Alphanumeric Values.\";i:8498;s:73:\"This Field Must Only Contain Alphanumeric Values And The Symbols (_ , -).\";i:8499;s:100:\"This Field Must Only Contain Alphanumeric Values And Special Symbols Except For (\\ , ? , \' , \'\', <).\";i:8715;s:8:\"Settings\";i:8800;s:51:\"You Can Not Transfer The Task To The Same Employee!\";i:8801;s:55:\"The Deadline Date Can not Be Before The Delivery Date!!\";i:8802;s:61:\"You Can Not Add This Applicant! Applicant`s Age Is Less Than \";i:8803;s:117:\"You Can Not Define This Applicant As Married Or Add A Spouse Record For This Applicant! Applicant`s Age Is Less Than \";i:8804;s:58:\"Appraisal Period To Can`t Be Before Appraisal Period From!\";i:8805;s:25:\"Please Select Center Name\";i:8806;s:20:\"Please Select Course\";i:8807;s:37:\"You Have To Add Other Expenses First.\";i:8808;s:69:\"The Appraisal Edit End Date Can Not Be After The Appraisal End Date !\";i:8809;s:84:\"The Employee Salary Has Conflicted With The Salary Range Limits In His Salary Scale!\";i:8810;s:43:\"This Date Should Not Be Before Today`s Date\";i:8811;s:63:\"The Other Request From Date Can Not Be Before The Today`s Date!\";i:8812;s:44:\"The maximum length to enter in this field is\";i:8813;s:33:\"The Email Field Should be Filled!\";i:8814;s:53:\"You Can Not Permission The Customer Name field Empty!\";i:8815;s:86:\"You Can Not Enter A Minimum Number Of Raters That Exceeds The Actual Number Of Raters!\";i:8816;s:92:\"The Evaluation Start Date Can Not Be Before The Evaluation Date! Please Re-enter Start Date.\";i:8817;s:98:\"The Evaluation End Date Can Not Be Before The Evaluation Start Date! Please Re-enter The End Date.\";i:8818;s:140:\"You Can Not Define A First Warning Date To Be After The End Date! Please Decrease The Number Of Days Until You Send The First Warning Email.\";i:8819;s:142:\"You Can Not Define A Second Warning Date To Be After The End Date! Please Decrease The Number Of Days Until You Send The Second Warning Email.\";i:8820;s:138:\"You Can Not Define A Last Warning Date To Be After The End Date! Please Decrease The Number Of Days Until You Send The Last Warning Email.\";i:8821;s:4:\"This\";i:9022;s:58:\"The Employee Has Vacation With No Resumption Date Entered!\";i:9225;s:98:\"You Can Not Calculate This Month`s Salary! There Are Some Unposted Transactions During This Month!\";i:9319;s:56:\"The Selected Course Is Not Available At Selected  Center\";i:9600;s:69:\"This Field Should Only Contain Percentage Values , Not Exceeding 100%\";i:9601;s:46:\"This Field Should Only Contain Decimal Values.\";i:9602;s:47:\"This Field Should Only Contain Positive Values.\";i:9603;s:56:\"This Field Should Only Contain Positive Non-Zero Values.\";i:9604;s:53:\"This Field Should Only Contain A Valid Email Address.\";i:9605;s:60:\"The Start-Time Cannot Be More Than OR Equal To The End-Time.\";i:9606;s:47:\"The Entered Time Should Be On The Format HH:MM.\";i:9607;s:46:\"This Field Should Only Contain Positive Values\";i:9822;s:10:\"Loading...\";i:9858;s:78:\"The Start Date Can Not Be Before The End Date! Please Re-enter The Start Date \";i:9875;s:38:\"Dates Periods Should Not Be Overlapped\";i:10316;s:26:\"Incorrect Transaction Code\";i:10513;s:16:\"In Notice Period\";i:10542;s:87:\"This Month Has A Cost Distribution Done, The Employee`s Salary Can Not Be Recalculated!\";i:10543;s:128:\"This Month Has An Accumulated Balance And The Next Month`s Salary Was Calculated, The Employee`s Salary Can Not Be Recalculated!\";i:10575;s:43:\"Salary Is Calculated For The Previous Month\";i:10578;s:62:\"Can Not Calculate Previous Salary, Vacation already Calculated\";i:10645;s:49:\"Transaction Date can`t be before the current date\";i:10796;s:4:\"Like\";i:10798;s:6:\"Unlike\";i:10855;s:49:\"Are You Sure You Want To Exit Discarding Changes?\";i:10999;s:13:\"Notifications\";i:11001;s:12:\"Mark As Read\";i:11002;s:14:\"Mark As Unread\";i:11010;s:9:\"Follow-up\";i:11011;s:16:\"Do Not Follow-up\";i:11286;s:72:\"Are You Sure That You Want To Stop Receiving Answers For This Question ?\";i:11398;s:75:\"The To Grade Can Not Be Less Than From Grade! Please Re-enter The To Grade.\";i:11529;s:42:\"Entered Value Should Be Less Than Or Equal\";i:11530;s:45:\"Entered Value Should Be Greater Than Or Equal\";i:11777;s:140:\"The Salaries Are Already Posted And Locked, This Transaction Will Affect The Salaries Reports, Do You Want To Continue Calculation Process ?\";i:11865;s:73:\"You Can Not Recalculate Salaries, This Month Salaries Were Already Locked\";i:11969;s:47:\"Retroactive Date Cant Not Be Before Hiring Date\";i:12334;s:31:\"Please Fill The Required Fields\";i:12379;s:51:\"The Employee Has Not Resumed From The Vacation Yet!\";i:12423;s:18:\"Connection Timeout\";i:12640;s:35:\"Date Period Must Be A Month Or Less\";i:12858;s:5:\"Alert\";i:13110;s:14:\"Overtime Plans\";i:13111;s:22:\"Analyze Overtime Plans\";i:13188;s:85:\"Total Overtime Hours Exceeds Requested Total Overtime Hours,Do You Want To Continue ?\";i:13252;s:29:\"Duplicated - Already Exported\";i:13253;s:22:\"Exceeded Allowed Limit\";i:13260;s:16:\"Exporting Failed\";i:13270;s:23:\"Please Insert Batch No.\";i:50091;s:12:\"Full Profile\";i:50163;s:62:\"Are You Sure You Want To Delete All Records Within This Batch?\";i:50165;s:110:\" Some of employees skills are already updated. Are you sure you want to delete the skills from employees file?\";i:50819;s:66:\"Employee Feedback Is Mandatory Before Posting Disciplinary Actions\";i:50860;s:32:\"Non-Payroll Benefit Transactions\";i:50889;s:25:\"Non-Payroll Benefit Raise\";i:51175;s:11:\"In progress\";i:51350;s:7:\"Private\";i:51517;s:59:\"Sum Of Base And Additional S.S Should Be Less Than Or Equal\";i:52220;s:24:\"The Employee Age Exceeds\";i:52221;s:28:\"(The Maximum Age For Hiring)\";i:52260;s:26:\"The Employee Age Less Than\";i:52261;s:28:\"(The Minimum Age For Hiring)\";i:52448;s:65:\"Wrong Format Inserted. Please Enter The Period In Format YY:MM:DD\";i:52486;s:4:\"ID #\";i:52487;s:9:\"Appraisal\";i:52617;s:37:\"You Can Not Add More Than Five Items.\";i:53002;s:50:\"Are You Sure You Want To Update Business Details ?\";i:53568;s:28:\"Please select a record first\";i:53903;s:12:\"Done, Close!\";i:53905;s:12:\"Under the ID\";i:54004;s:47:\"This Field Should Not Contain Single Quotation.\";i:54269;s:121:\"This Month\'s Salary Has Been Converted To Other Income Or Other Deduction, The Employee\'s Salary Can Not Be Recalculated!\";i:54739;s:6:\"Alert!\";i:55065;s:25:\"Both(Internal , External)\";i:55072;s:133:\"The Employee Salary Has Conflicted With The Salary Range Limits In His Salary Scale! Nevertheless The Operation Was Done Successfully\";i:55716;s:121:\"This Month\'s Salary Has Been Converted To Other Income Or Other Deduction, The Employee\'s Salary Can Not Be Recalculated!\";i:56691;s:19:\"Direct Subordinates\";i:56692;s:21:\"InDirect Subordinates\";i:58081;s:63:\"The Employee Has Vacation With No Resumption Transaction Posted\";i:58194;s:39:\"The Employee Has an Initial Termination\";i:59389;s:41:\"Incomplete Roster Schedule for This Month\";}');
+</script>
+    <style>
+        /*
+        .required {
+            color : #FF0000!important;
+		}
+		*/
+        .required::after {
+            content: " *";
+            /* color : #FF0000 !important; */
+        }
+    </style>
+
+<style>
+    .mandatoryfield input[validation*='required'],.mandatoryfield select[validation*='required'],.mandatoryfield textarea[validation*='required']
+    {
+        color:#FF0000 !important;
+    }
+    .mandatoryHeader
+    {
+        color:#FF0000 !important;
+    }
+    .modal {
+        z-index: 99999 !important;
+    }
+</style>
+    <link type="text/css" rel="stylesheet" href="https://ent.menaitech.com/ntandt/application/hrms/DB/Include/Shared/css/print.css?dontcash=v7.8.2208.08">
+
+
+
+
+
+<script type="text/javascript">
+
+    // this script to add a new class on the mandatory fields
+        $(document).ready(function(){
+        $('FONT[color*="#FF0000"]').addClass('mandatoryfields');
+        $('FONT[style*="#FF0000"]').addClass('mandatoryfields');
+    });
+
+    function open_attach(file_path1) {
+        window.open("https://ent.menaitech.com/ntandt/application/hrms/MenaImages/Attachments/"+file_path1,'_blank',"width="+(screen.width-8)+", height="+(screen.height-60)+", scrollbars=yes; noresize=no");
+    }
+
+
+
+    $(document).ready(function() {
+        if($('#RSIFrame').html()==null )
+        {
+            try	{opener.parent.Remove_LoadingBox();}
+            catch (e)
+            {
+                try	{top.Remove_LoadingBox();} catch (e){}
+            }
+            try	{parent.Remove_LoadingBox();} catch (e)
+            {
+                try	{top.Remove_LoadingBox();} catch (e){}
+            }
+        }
+        $("body").click(function(a){try {parent.hide_sub_menu_box(a); }	catch (e) {}})
+
+        $(document).keydown(function (){
+            try {zero_time();}
+            catch (e)
+            {
+                try {window.parent.zero_time();}
+                catch (e)
+                {
+                    try {window.opener.zero_time();}
+                    catch (e)
+                    {
+                        try {parent.zero_time();}
+                        catch (e)
+                        {
+                            try {parent.parent.zero_time();}
+                            catch (e)
+                            {
+                                try {opener.parent.zero_time();}
+                                catch (e)
+                                {
+                                    try {opener.parent.parent.zero_time();}
+                                    catch (e)
+                                    {
+                                        try {opener.zero_time();} catch (e){}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        $(document).click(function (){
+            try {zero_time();}
+            catch (e)
+            {
+                try {window.parent.zero_time();}
+                catch (e)
+                {
+                    try {window.opener.zero_time();}
+                    catch (e)
+                    {
+                        try {parent.zero_time();}
+                        catch (e)
+                        {
+                            try {parent.parent.zero_time();}
+                            catch (e)
+                            {
+                                try {opener.parent.zero_time();}
+                                catch (e)
+                                {
+                                    try {opener.parent.parent.zero_time();}
+                                    catch (e)
+                                    {
+                                        try {opener.zero_time();} catch (e){}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+
+        $(document).keydown(function (){
+            try {zero_time();}
+            catch (e)
+            {
+                try {window.parent.zero_time();}
+                catch (e)
+                {
+                    try {window.opener.zero_time();}
+                    catch (e)
+                    {
+                        try {parent.zero_time();}
+                        catch (e)
+                        {
+                            try {opener.zero_time();} catch (e){}
+                        }
+                    }
+                }
+            }
+        });
+
+        $(document).click(function (){
+            try {zero_time();}
+            catch (e)
+            {
+                try {window.parent.zero_time();}
+                catch (e)
+                {
+                    try {window.opener.zero_time();}
+                    catch (e)
+                    {
+                        try {parent.zero_time();}
+                        catch (e)
+                        {
+                            try {opener.zero_time();} catch (e){}
+                        }
+                    }
+                }
+            }
+        });
+
+
+        if(0!=1)
+        {
+            parent.$('#actionMenu').css('display','block');
+        }
+
+
+
+
+        $('input[type=text],textarea').each(function(){
+            var CurrVal = $(this).val();
+            var inputCurrVal = CurrVal.replace(/\'\'/g,"'");
+            $(this).val(inputCurrVal)
+        });
+
+
+    });
+
+    function add(name,type) {
+        var forms=document.getElementsByTagName('form');
+        if(type==null) type='hidden'
+        for(var i in forms){
+            if(typeof forms[i].name=='undefined') continue;
+            var element = document.createElement("input");
+            element.setAttribute("type", type);
+            element.setAttribute("name", name);
+            element.setAttribute("id", name);
+            if(typeof forms[i].appendChild!='undefined')
+                forms[i].appendChild(element);
+
+        }
+    }
+
+    /*-------------------- Check The Browser Type if MSIE 6 Will Not Call The Function --------------------*/
+    var browser_type;
+    browser_type=navigator.appVersion;
+
+
+    /*---------------------------------/ Function Resize All Select list /-----------------------------------*/
+    /*---------------------------------- ------------------------------- ------------------------------------*/
+
+    
+
+
+    function reportPrintFN() {
+        $(document).ready(function(e)
+        {
+            const printStyles = `
+                @media print {
+                 @page {
+                margin: 0; /* Set default margins */
+                padding: 0;
+                    }
+                }
+            `;
+
+            const styleSheet = document.createElement("style");
+            styleSheet.type = "text/css";
+            styleSheet.media = "print";
+            styleSheet.textContent = printStyles;
+            document.head.appendChild(styleSheet);
+            window.print();
+        });
+    }
+
+</script>
+<script type='text/javascript'> function show_org_chart(){ return false };</script>
+    <script  type="text/JavaScript">
+        function detectKey(obj)
+        {
+            if ((event.keyCode == 78 || event.keyCode == 83) && (event.ctrlKey)) {  // ignore ctrl+n and ctrl+s in all reports
+                event.cancelBubble = true;
+                event.returnValue = false;
+                event.keyCode = false; return false;
+            }
+
+            return ;
+        }
+        document.onkeydown = detectKey;
+    </script>
+
+        <script type="text/javascript">
+            var EnableOnAllPages=true;
+            $(document).ready(function () {
+
+                if(typeof ( parent.HideIframe)==typeof (Function)){
+                    if(EnableOnAllPages==false) {
+                        parent.HideIframe();
+                    }else{
+                        parent.ShowIframe();
+                    }};
+
+                //check for any inputChangeBeforeSave value
+
+
+
+            });
+        </script>
+    
+
+<script type="text/javascript">
+
+    function IeVersion() {
+        //Set defaults
+        var value = {
+            IsIE: false,
+            TrueVersion: 0,
+            ActingVersion: 0,
+            CompatibilityMode: false
+        };
+
+        //Try to find the Trident version number
+        var trident = navigator.userAgent.match(/Trident\/(\d+)/);
+        if (trident) {
+            value.IsIE = true;
+            //Convert from the Trident version number to the IE version number
+            value.TrueVersion = parseInt(trident[1], 10) + 4;
+        }
+
+        //Try to find the MSIE number
+        var msie = navigator.userAgent.match(/MSIE (\d+)/);
+        if (msie) {
+            value.IsIE = true;
+            //Find the IE version number from the user agent string
+            value.ActingVersion = parseInt(msie[1]);
+        } else {
+            //Must be IE 11 in "edge" mode
+            value.ActingVersion = value.TrueVersion;
+        }
+
+        //If we have both a Trident and MSIE version number, see if they're different
+        if (value.IsIE && value.TrueVersion > 0 && value.ActingVersion > 0) {
+            //In compatibility mode if the trident number doesn't match up with the MSIE number
+
+            value.CompatibilityMode = value.TrueVersion != value.ActingVersion;
+        }
+        return value;
+    }
+    var ie = IeVersion();
+    if(ie.CompatibilityMode==true){
+        // alert(site_host_path);
+        // window.location.href('a');
+        document.body.style.margin='0px';
+        document.body.innerHTML='<div style="WIDTH: 100%; BACKGROUND: black; COLOR: red; text-align: center;padding-top:20%;height:400px;font-family:tahoma"><h2>You Should  Turn Off Compatibility View <br><br> Please Turn Off Compatibility View';
+
+    }
+
+    // alert(1);
+</script>
+
+<script type="text/javascript">
+
+
+    function save_filters(){
+
+        //dataString = $('form[name="form"]').serialize();
+        var report_form = $('#report_form').val();
+        var number_of_rows = $('#number_of_rows').val();
+        var signature_template = $('#signature_template').val();
+        var font_size = $('#font-size').val();
+        if ($('#repeat_signiture').is(':checked')) {
+            var repeat_signiture = 1;
+        }else{
+            var repeat_signiture = 0;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: site_host_path+"/" +system_name+'ajax_proxi.php?ajax_URL=18&page_cat='+"497",
+            data: {'report_form':report_form,'number_of_rows':number_of_rows,'signature_template':signature_template,'font_size':font_size,'repeat_signiture':repeat_signiture},
+            success: function () {
+                parent.Remove_LoadingBox()
+                //submitForm(document.form)
+            }
+        });
+
+
+    }
+    $('input[name=onservice]').removeAttr('checked');
+    $('input[name=onservice]:first').attr('checked',true);
+
+
+    function handle_change_emp_when_active_adv_search() {
+        $("employee_form, form").submit(function(event) {
+                        if ("3793" != this.employee_code.value) {
+                event.preventDefault();
+                $("#creation").prop("disabled", true);
+                $("[name=move_trans1]").val(0);
+            }
+                    });
+    }
+
+        document.addEventListener("DOMContentLoaded", function () {
+        var pageBreakCheckboxes = document.querySelectorAll('input[name="option_page_break"]');
+        pageBreakCheckboxes.forEach(function (checkbox) {
+            checkbox.checked = false;
+            checkbox.disabled = true;
+        });
+    });
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<script>
+    $('input[name=employee_code]').on('change',function (){
+        $('select[name=TDimension]').val(-1);
+        $('select[name=category_4]').val(-1);
+        $('select[name=category_5]').val(-1);
+        $('select[name=category_6]').val(-1);
+    });
+</script>
+
+
+
